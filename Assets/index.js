@@ -22,14 +22,22 @@ message: 'What is the project is about?'
 ]);
 
 questions()
-// .then(function(answers) {
-//     console.log(answers)
+.then(function(userResponse) {
+    console.log(userResponse)
 
-//     const { name, description } = answers;
-//  let README =`${name} ${description}`
+    const { name, description } = userResponse;
 
-// });
+ let README =`# The title of the project is ${name} 
+ # This project is about ${description}`
 
+
+ fs.writeFile(`README.md`, README, (err) => {
+  if (err) {
+    console.log(err);
+  }
+ }); 
+});
+/*
 const generateReadMe = (answers) =>
 `<!DOCTYPE html>
 <html lang="en">
@@ -48,16 +56,14 @@ const generateReadMe = (answers) =>
 writeToFile()
 // function to write README file
 function writeToFile(fileName, data) {
-    const fileName = 'README.md'
-    const data = generateReadMe(answers)
-    .then((answers) => writeFileAsync(fileName, data ))
+    //const fileName = 'README.md'
+    //const data = generateReadMe(answers)
+   // .then((answers) => writeFileAsync())
 }
-/*
+
 // function to initialize program
 function init() {
 
 }
 
-// function call to initialize program
-init();
 */
