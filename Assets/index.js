@@ -11,18 +11,19 @@ const questions = () => inquirer.prompt([
 
 {
 type: 'input',
-name: 'name',
+name: 'description',
 message: 'What is the project is about?'
 },
 
-{
-
-}
 ]);
 
 questions()
-.then
+.then(function(answers) {
+    console.log(answers)
 
+});
+
+/*
 // function to write README file
 function writeToFile(fileName, data) {
     const fileName = READMEGenerate + '.md'
@@ -35,3 +36,4 @@ function init() {
 
 // function call to initialize program
 init();
+*/
