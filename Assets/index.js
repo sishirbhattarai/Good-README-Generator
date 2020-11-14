@@ -9,6 +9,11 @@ const questions = () =>
 inquirer.prompt([
 {
  type: 'input',
+ name: 'user',
+ message: 'What is your username?'
+},
+{
+ type: 'input',
  name: 'name',
  message: 'What is the title of the project?'
 },
@@ -31,9 +36,12 @@ questions()
  # This project is about ${description}`
 
 
- fs.writeFile(`README.md`, README, (err) => {
+ fs.writeFile(`README-generated.md`, README, (err) => {
   if (err) {
     console.log(err);
+  }
+  else {
+    console.log("The README is now generated Successfully")
   }
  }); 
 });
