@@ -12,6 +12,13 @@ inquirer.prompt([
  name: 'user',
  message: 'What is your username?'
 },
+
+{
+type: 'input',
+name: 'email',
+message: 'What is your email address?'
+},
+
 {
  type: 'input',
  name: 'name',
@@ -32,36 +39,29 @@ questions()
 
     const { name, description } = userResponse;
 
- let README =`# The title of the project is ${name} 
- # This project is about ${description}`
+ let README =`# Project Title: ${name} 
 
+ # Project Description: ${description}
+ 
+ # Table of Contents:
 
- fs.writeFile(`README-generated.md`, README, (err) => {
+Installation
+Usage
+Methodology
+License
+ 
+ `
+
+ 
+ fs.writeFile(`README(new).md`, README, function(err) {
   if (err) {
     console.log(err);
   }
-  else {
-    console.log("The README is now generated Successfully")
-  }
+   console.log("The README is now generated Successfully")
+     
  }); 
 });
 /*
-const generateReadMe = (answers) =>
-`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.description}.</p>`
-
-writeToFile()
 // function to write README file
 function writeToFile(fileName, data) {
     //const fileName = 'README.md'
