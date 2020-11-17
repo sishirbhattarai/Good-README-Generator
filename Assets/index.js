@@ -98,7 +98,8 @@ questions()
     const { name, description, contributorsnameemail, githublink, package, installation, authoremail, authorname, usage, apprun   } = userResponse;
 
  let README =`
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ 
+ badge(choice)
  
  ### Project Title: 
  ${name} 
@@ -134,10 +135,9 @@ questions()
  
  ## Author:
  If you have used this application and if you have any questions, please feel free to contact me. My information is as below:
-
- ${authoremail}
- ${authorname}
- ${githublink}
+ * ${authorname}
+ * ${authoremail}
+ * ${githublink}
 
 
  `
