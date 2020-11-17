@@ -8,27 +8,9 @@ const writeFileAsync = util.promisify(fs.writeFile);
 const questions = () => 
 inquirer.prompt([
 {
- type: 'input',
- name: 'username',
- message: 'What is your name?'
-},
-
-{
-  type: 'input',
-  name: 'githublink',
-  message: 'What is your Github link?'
- },
-
-{
 type: 'input',
-name: 'email',
-message: 'What is your email address?'
-},
-
-{
- type: 'input',
- name: 'name',
- message: 'What is the title of the project?'
+name: 'name',
+message: 'What is the title of the project?'
 },
 
 {
@@ -37,6 +19,44 @@ name: 'description',
 message: 'What is the project is about?'
 },
 
+{
+type: 'input',
+name: 'installation',
+message: 'What is the process of installation?'
+  },
+
+{
+type: 'input',
+name: 'contributorsname',
+message: 'What are the contributors name?'
+},
+
+{
+type: 'input',
+name: 'emails',
+message: 'What are the contributors email address?'
+},
+   
+{
+type: 'input',
+name: 'authorname',
+message: 'What is your full name?'
+},
+
+{
+type: 'input',
+name: 'authoremail',
+message: 'What is your email address?'
+  },
+
+{
+type: 'input',
+name: 'githublink',
+message: 'What is your Github link?'
+  },
+   
+
+
 ]);
 
 questions()
@@ -44,13 +64,15 @@ questions()
 .then(function(userResponse) {
     console.log(userResponse)
 
-    const { name, description, username, email, githublink,  } = userResponse;
+    const { name, description, contributorsname, emails, githublink, installation, authoremail, authorname,   } = userResponse;
 
- let README =`## Project Title: ${name} 
+ let README =`### Project Title: 
+ ${name} 
 
- ## Project Description: ${description}
+ ### Project Description: 
+ ${description}
  
- ## Table of Contents:
+ ### Table of Contents:
 
  * [Installation](#Installation)
  * [Instructions](#Instructions)
@@ -58,14 +80,23 @@ questions()
  * [Contributors](#Contributors)
  * [Author](#Author)
  
- ##Installation
+ ## Installation:
+ ${installation}
 
 
 ## Contributors:
 
-* ${username}
-* ${email}
-* ${githublink}
+ ${contributorsname}
+ ${emails}
+ 
+
+ ## Author:
+
+ If you have used this application and it you have any questions, please feel free to contact me with any questions via the information below:
+
+ ${authoremail}
+ ${authorname}
+ ${githublink}
 
 
  `

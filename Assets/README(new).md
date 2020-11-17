@@ -1,8 +1,10 @@
-## Project Title: Good README generator 
+### Project Title: 
+ Good readme generator 
 
- ## Project Description: This application is to create professional README generator.
+ ### Project Description: 
+ This application is to create professional README generator.
  
- ## Table of Contents:
+ ### Table of Contents:
 
  * [Installation](#Installation)
  * [Instructions](#Instructions)
@@ -10,14 +12,23 @@
  * [Contributors](#Contributors)
  * [Author](#Author)
  
- ##Installation
+ ## Installation:
+ To generate your own README, first run npm install in order to install the following npm package dependencies as specified in the package.json:
 
 
 ## Contributors:
 
-* Sishir
-* sishir.bhattarai@outlook.com
-* https://github.com/sishirbhattarai
+ Sishir Bhattarai , Rakshya Khadka
+ sishir.bhattarai@outlook.com, rakshya@gmail.com
+ 
+
+ ## Author:
+
+ If you have used this application and it you have any questions, please feel free to contact me with any questions via the information below:
+
+ sishir.bhattarai@outlook.com
+ Sishir Bhattarau
+ https://github.com/sishirbhattarai
 
 
  
