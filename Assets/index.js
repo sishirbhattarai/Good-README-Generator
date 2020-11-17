@@ -9,9 +9,15 @@ const questions = () =>
 inquirer.prompt([
 {
  type: 'input',
- name: 'user',
- message: 'What is your username?'
+ name: 'username',
+ message: 'What is your name?'
 },
+
+{
+  type: 'input',
+  name: 'githublink',
+  message: 'What is your Github link?'
+ },
 
 {
 type: 'input',
@@ -34,22 +40,34 @@ message: 'What is the project is about?'
 ]);
 
 questions()
+//taking userResponse and writing it to the README file. 
 .then(function(userResponse) {
     console.log(userResponse)
 
-    const { name, description } = userResponse;
+    const { name, description, username, email, githublink,  } = userResponse;
 
- let README =`# Project Title: ${name} 
+ let README =`## Project Title: ${name} 
 
- # Project Description: ${description}
+ ## Project Description: ${description}
  
- # Table of Contents:
+ ## Table of Contents:
 
-Installation
-Usage
-Methodology
-License
+ * [Installation](#Installation)
+ * [Instructions](#Instructions)
+ * [License](#License)
+ * [Contributors](#Contributors)
+ * [Author](#Author)
  
+ ##Installation
+
+
+## Contributors:
+
+* ${username}
+* ${email}
+* ${githublink}
+
+
  `
 
  
@@ -57,7 +75,7 @@ License
   if (err) {
     console.log(err);
   }
-   console.log("The README is now generated Successfully")
+   console.log("The README(new) is now generated Successfully")
      
  }); 
 });

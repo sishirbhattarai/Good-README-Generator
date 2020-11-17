@@ -1,12 +1,23 @@
-# Project Title: Weather 
+## Project Title: Good README generator 
 
- # Project Description: Dashboard
+ ## Project Description: This application is to create professional README generator.
  
- # Table of Contents:
+ ## Table of Contents:
 
-Installation
-Usage
-Methodology
-License
+ * [Installation](#Installation)
+ * [Instructions](#Instructions)
+ * [License](#License)
+ * [Contributors](#Contributors)
+ * [Author](#Author)
  
+ ##Installation
+
+
+## Contributors:
+
+* Sishir
+* sishir.bhattarai@outlook.com
+* https://github.com/sishirbhattarai
+
+
  
