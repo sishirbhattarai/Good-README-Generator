@@ -118,7 +118,7 @@ questions()
  To install the ${package} package, the command to run from command line is ${installation}. 
 
  ## Testing:
- Run the tests with the CLI command ${test}.
+ Run the tests with the CLI command is: ${test}.
 
  ## Usage:
  ${usage}
