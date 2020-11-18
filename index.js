@@ -93,8 +93,10 @@ questions()
     const { name, description, contributorsnameemail, githublink, package, installation, authoremail, authorname, usage, apprun, test, license} = userResponse;
 
  let README =`
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
+ [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)
  
- badge(choice)
  
  ### Project Title: 
  ${name} 
