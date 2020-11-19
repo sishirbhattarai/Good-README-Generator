@@ -23,7 +23,7 @@ message: 'What is the project is about?',
 type: 'list',
 name: 'license',
 message: 'What is the license name for your project?',
-choices: ["MIT", "IBM","MOZILLA"],
+choices: ["MIT", "IPL","Zlib"],
 },
 
 {
@@ -93,10 +93,8 @@ questions()
     const { name, description, contributorsnameemail, githublink, package, installation, authoremail, authorname, usage, apprun, test, license} = userResponse;
 
  let README =`
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
- [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
- [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)
- 
+ [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})
+
  
  ### Project Title: 
  ${name} 
@@ -144,13 +142,14 @@ questions()
  `
 
  
- fs.writeFile(`README.md`, README, function(err) {
-  if (err) {
-    console.log(err);
+ fs.writeFile(`README.md`, README, function(error) {
+  if (error) {
+    return console.log(error);
   }
+  else {
    console.log("The README is now generated Successfully")
      
- }); 
+ }}); 
 });
 /*
 // function to write README file

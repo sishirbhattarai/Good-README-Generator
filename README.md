@@ -1,8 +1,6 @@
 
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
- [![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)
- [![License: Zlib](https://img.shields.io/badge/License-Zlib-lightgrey.svg)](https://opensource.org/licenses/Zlib)
- 
+ [![License: IPL](https://img.shields.io/badge/License-IPL-yellow.svg)](https://opensource.org/licenses/IPL)
+
  
  ### Project Title: 
  Good README generator 
@@ -27,11 +25,11 @@
  Run the tests with the CLI command is: npm test.
 
  ## Usage:
- This application can be used to generate your own README file for your project
+ This application can be used to generate your own README file for your project.
  The application will be invoked with the CLI command node index.js and follow the prompts.
 
  ## License:
- The License used for this project is MIT.
+ The License used for this project is IPL.
 
  ## Contributors:
  Sishir Bhattarai (sishir.bhattarai@outlook.com)
